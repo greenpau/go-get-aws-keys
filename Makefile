@@ -76,7 +76,7 @@ qtest:
 dist: all
 	@rm -rf  $(DIST_DIR)*
 	@mkdir -p $(DIST_DIR)
-	@cp ./bin/$(BUILD_OS)-$(BUILD_ARCH)/$(BINARY) $(DIST_DIR)/$(BINARY)$(DIST_ARCHIVE_EXE)
+	@cp ./bin/$(BUILD_OS)-$(BUILD_ARCH)/$(BINARY)$(DIST_ARCHIVE_EXE) $(DIST_DIR)/$(BINARY)$(DIST_ARCHIVE_EXE)
 	@cp ./assets/conf/azure/$(BINARY)-config.yaml $(DIST_DIR)/
 	@cp ./README.md $(DIST_DIR)/
 	@cp ./LICENSE $(DIST_DIR)/
