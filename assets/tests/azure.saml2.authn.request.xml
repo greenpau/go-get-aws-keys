@@ -1,0 +1,15 @@
+<samlp:AuthnRequest
+  xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"
+  xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
+  ID="AWSSAMLf7138f2d-dc0e-11e9-a719-0050569e392c"
+  Version="2.0"
+  AssertionConsumerServiceURL="https://signin.aws.amazon.com/saml"
+  Destination="https://login.microsoftonline.com/ef4771a7-108f-4309-b352-7899297fbf4d/saml2"
+  IssueInstant="2019-09-21T01:27:24.4418053Z"
+  ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST">
+    <saml:Issuer>6b2fa2ee-c6c4-425a-ac69-aad108fd1483</saml:Issuer>
+    <samlp:NameIDPolicy Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress"/>
+    <samlp:RequestedAuthnContext>
+        <saml:AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport</saml:AuthnContextClassRef>
+    </samlp:RequestedAuthnContext>
+</samlp:AuthnRequest>

@@ -14,13 +14,13 @@ claim from Azure, and passing the claims to AWS STS service.
 
 ## Getting Started
 
+### Building from Source
+
 The tool is a single binary:
 * Linux/MAC: `go-get-aws-keys`
 * Windows: `go-get-aws-keys.exe`
 
-### Build from Source
-
-Run the following commands to build binaries for various operating systems:
+Run the following commands:
 
 ```bash
 git clone git@github.com:greenpau/go-get-aws-keys.git
@@ -29,6 +29,16 @@ make
 make BUILD_OS="darwin"
 make BUILD_OS="windows" BUILD_ARCH="amd64"
 make BUILD_OS="windows" BUILD_ARCH="386"
+```
+
+The commands build binaries for various operating systems:
+
+```bash
+$ find bin/ -type f
+bin/linux-amd64/go-get-aws-keys
+bin/darwin-amd64/go-get-aws-keys
+bin/windows-amd64/go-get-aws-keys.exe
+bin/windows-386/go-get-aws-keys.exe
 ```
 
 ### Configuration File

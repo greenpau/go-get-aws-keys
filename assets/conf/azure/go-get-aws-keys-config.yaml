@@ -1,0 +1,14 @@
+---
+azure:
+  tenant_id: '9c5399e3-e3e4-49aa-b6c7-e27d618ae206'
+  application_id: 'f4cd2b32-6d0d-423d-85ce-9acc0318a4fe'
+aws:
+  roles:
+  - account_id: '000000000001'
+    role: 'Administrator'
+    region: 'us-east-1'
+    profile_name: 'default'
+  - account_id: '000000000002'
+    role: 'Administrator'
+    region: 'us-east-1'
+email: 'jsmith@contoso.com'

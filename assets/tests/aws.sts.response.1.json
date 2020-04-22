@@ -1,0 +1,17 @@
+{
+    "SubjectType": "urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress",
+    "AssumedRoleUser": {
+        "AssumedRoleId": "ASBSGQSZR7ZNMSXODWUZO:jsmith@contoso.com",
+        "Arn": "arn:aws:sts::000000000001:assumed-role/Administrator/jsmith@contoso.com"
+    },
+    "Audience": "https://signin.aws.amazon.com/saml",
+    "NameQualifier": "NGI1NzJlYTMtMjMxMi00YTUxLWEzZTgtM2M5MGIzMDlkZTM0Cg==",
+    "Credentials": {
+        "SecretAccessKey": "YTU1OTE0OTgtYjU1Ni00YTMzLWE1MDYtZmJjN2Jh",
+        "SessionToken": "MmY2MjdmMmItODA4NS00MTk3LTk3ZjYtYzhkNDE5NWYyNjEwCg==",
+        "Expiration": "2019-07-17T12:18:00Z",
+        "AccessKeyId": "ASBGQSJR7ZAFSXODTUMO"
+    },
+    "Subject": "jsmith@contoso.com",
+    "Issuer": "https://sts.windows.net/9511702a-7634-4b4c-bea0-7b4d9d395e2b/"
+}

@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<samlp:Response xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" ID="_5ec1c37e-324e-4546-836b-9246e22d68c3" Version="2.0" IssueInstant="2019-09-07T09:58:28.355Z" Destination="https://signin.aws.amazon.com/saml">
+  <Issuer xmlns="urn:oasis:names:tc:SAML:2.0:assertion">https://sts.windows.net/4d1099a0-9531-467b-9780-dff8c47867bf/</Issuer>
+  <samlp:Status>
+    <samlp:StatusCode Value="urn:oasis:names:tc:SAML:2.0:status:Success"/>
+  </samlp:Status>
+  <Assertion xmlns="urn:oasis:names:tc:SAML:2.0:assertion" ID="_6a732e9f-cc33-451a-8d03-7f7a2a99a3f4" IssueInstant="2019-09-07T09:58:28.340Z" Version="2.0">
+    <Issuer>https://sts.windows.net/4d1099a0-9531-467b-9780-dff8c47867bf/</Issuer>
+    <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <SignedInfo>
+        <CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+        <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+        <Reference URI="#_6a732e9f-cc33-451a-8d03-7f7a2a99a3f4">
+          <Transforms>
+            <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+            <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+          </Transforms>
+          <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+          <DigestValue>...</DigestValue>
+        </Reference>
+      </SignedInfo>
+      <SignatureValue>...</SignatureValue>
+      <KeyInfo>
+        <X509Data>
+            <X509Certificate>...</X509Certificate>
+        </X509Data>
+      </KeyInfo>
+    </Signature>
+    <Subject>
+      <NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">jsmith@contoso.com</NameID>
+      <SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer">
+        <SubjectConfirmationData NotOnOrAfter="2019-09-07T19:03:28.345Z" Recipient="https://signin.aws.amazon.com/saml"/>
+      </SubjectConfirmation>
+    </Subject>
+    <Conditions NotBefore="2019-09-07T09:53:28.330Z" NotOnOrAfter="2019-09-07T10:58:28.330Z">
+      <AudienceRestriction>
+        <Audience>https://signin.aws.amazon.com/saml</Audience>
+      </AudienceRestriction>
+    </Conditions>
+    <AttributeStatement>
+      <Attribute Name="http://schemas.microsoft.com/identity/claims/tenantid">
+        <AttributeValue>4d1099a0-9531-467b-9780-dff8c47867bf</AttributeValue>
+      </Attribute>
+      <Attribute Name="http://schemas.microsoft.com/identity/claims/objectidentifier">
+        <AttributeValue>2f75ef83-c474-4352-86bd-cf7c16b14124</AttributeValue>
+      </Attribute>
+      <Attribute Name="http://schemas.microsoft.com/identity/claims/displayname">
+        <AttributeValue>Smith, John</AttributeValue>
+      </Attribute>
+      <Attribute Name="http://schemas.microsoft.com/identity/claims/identityprovider">
+        <AttributeValue>https://sts.windows.net/4d1099a0-9531-467b-9780-dff8c47867bf/</AttributeValue>
+      </Attribute>
+      <Attribute Name="http://schemas.microsoft.com/claims/authnmethodsreferences">
+        <AttributeValue>urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport</AttributeValue>
+      </Attribute>
+      <Attribute Name="http://schemas.microsoft.com/ws/2008/06/identity/claims/role">
+        <AttributeValue>arn:aws:iam::795318967487:saml-provider/AzureAD,arn:aws:iam::795318967487:role/Administrator</AttributeValue>
+        <AttributeValue>arn:aws:iam::795318967487:saml-provider/AzureAD,arn:aws:iam::795318967487:role/ReadOnly</AttributeValue>
+        <AttributeValue>arn:aws:iam::399230634940:saml-provider/AzureAD,arn:aws:iam::399230634940:role/ReadOnly</AttributeValue>
+        <AttributeValue>arn:aws:iam::039296396363:saml-provider/AzureAD,arn:aws:iam::039296396363:role/ReadOnly</AttributeValue>
+        <AttributeValue>arn:aws:iam::039296396363:saml-provider/AzureAD,arn:aws:iam::039296396363:role/Administrator</AttributeValue>
+      </Attribute>
+      <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname">
+        <AttributeValue>John</AttributeValue>
+      </Attribute>
+      <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname">
+        <AttributeValue>Smith</AttributeValue>
+      </Attribute>
+      <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress">
+        <AttributeValue>jsmith@CONTOSO.EDU</AttributeValue>
+      </Attribute>
+      <Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name">
+        <AttributeValue>jsmith@contoso.com</AttributeValue>
+      </Attribute>
+      <Attribute Name="https://aws.amazon.com/SAML/Attributes/RoleSessionName">
+        <AttributeValue>jsmith@contoso.com</AttributeValue>
+      </Attribute>
+      <Attribute Name="https://aws.amazon.com/SAML/Attributes/Role">
+        <AttributeValue>arn:aws:iam::795318967487:saml-provider/AzureAD,arn:aws:iam::795318967487:role/Administrator</AttributeValue>
+        <AttributeValue>arn:aws:iam::795318967487:saml-provider/AzureAD,arn:aws:iam::795318967487:role/ReadOnly</AttributeValue>
+        <AttributeValue>arn:aws:iam::399230634940:saml-provider/AzureAD,arn:aws:iam::399230634940:role/ReadOnly</AttributeValue>
+        <AttributeValue>arn:aws:iam::039296396363:saml-provider/AzureAD,arn:aws:iam::039296396363:role/ReadOnly</AttributeValue>
+        <AttributeValue>arn:aws:iam::039296396363:saml-provider/AzureAD,arn:aws:iam::039296396363:role/Administrator</AttributeValue>
+      </Attribute>
+      <Attribute Name="https://aws.amazon.com/SAML/Attributes/SessionDuration">
+        <AttributeValue>3600</AttributeValue>
+      </Attribute>
+    </AttributeStatement>
+    <AuthnStatement AuthnInstant="2019-09-07T09:53:33.119Z" SessionIndex="_6a732e9f-cc33-451a-8d03-7f7a2a99a3f4">
+      <AuthnContext>
+        <AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport</AuthnContextClassRef>
+      </AuthnContext>
+    </AuthnStatement>
+  </Assertion>
+</samlp:Response>
