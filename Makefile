@@ -94,12 +94,6 @@ covdir:
 coverage: covdir
 	@go tool cover -html=.coverage/coverage.out -o .coverage/coverage.html
 
-docs:
-	@mkdir -p .doc
-	@godoc -html $(PROJECT)/$(PKG_DIR) > .doc/index.html
-	@echo "Run to serve docs:"
-	@echo "    godoc -goroot .doc/ -html -http \":5000\""
-
 release:
 	@echo "Making release"
 	@if [ $(GIT_BRANCH) != "master" ]; then echo "cannot release to non-master branch $(GIT_BRANCH)" && false; fi
