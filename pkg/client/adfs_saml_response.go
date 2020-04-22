@@ -194,10 +194,10 @@ func ParseAwsRole(s string) (*AwsRole, error) {
 	}
 	r.AccountID = roleParts[4]
 	roleNameParts := strings.Split(roleParts[5], "/")
-	if len(roleNameParts) != 2 {
-		return &r, fmt.Errorf("the passed Role name does not match expected format (%d parts): role/<role_name>", len(roleNameParts))
+	if len(roleNameParts) < 2 {
+		return &r, fmt.Errorf("the passed Role name does not match expected format: role/*<role_name>")
 	}
-	r.Name = roleNameParts[1]
+	r.Name = roleNameParts[len(roleNameParts)-1]
 	return &r, nil
 }
 
