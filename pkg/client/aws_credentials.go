@@ -140,7 +140,7 @@ func (c *AwsCredentials) WriteEnvVarsFile(fp string) error {
 	}
 	sb.WriteString(fmt.Sprintf("%s Assumed Role ID: %s\n", commentWord, c.Raw.AssumedRoleUser.AssumedRoleId))
 	sb.WriteString(fmt.Sprintf("%s Assumed Role ARN: %s\n", commentWord, c.Raw.AssumedRoleUser.Arn))
-	sb.WriteString(fmt.Sprintf("%s AWS_DEFAULT_REGION%s\n", exportWord, sep, c.DefaultRegion))
+	sb.WriteString(fmt.Sprintf("%s AWS_DEFAULT_REGION%s%s\n", exportWord, sep, c.DefaultRegion))
 	sb.WriteString(fmt.Sprintf("%s AWS_ACCESS_KEY_ID%s%s\n", exportWord, sep, c.AccessKeyId))
 	sb.WriteString(fmt.Sprintf("%s AWS_SECRET_ACCESS_KEY%s%s\n", exportWord, sep, c.SecretAccessKey))
 	sb.WriteString(fmt.Sprintf("%s AWS_SESSION_TOKEN%s%s\n", exportWord, sep, c.SessionToken))

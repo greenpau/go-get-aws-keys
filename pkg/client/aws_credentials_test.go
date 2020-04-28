@@ -50,7 +50,7 @@ func TestWriteAwsCredentials(t *testing.T) {
 		}
 
 		iniFilePath := path.Join(assetDir, test.input+".ini")
-		if err := awsCredentials.WriteCredentialsFile(iniFilePath, "default"); err != nil {
+		if err := awsCredentials.WriteCredentialsFile(iniFilePath); err != nil {
 			if !test.shouldFail {
 				t.Logf("FAIL: Test %d: input '%s', expected to pass, but failed: %s",
 					i, test.input, err)

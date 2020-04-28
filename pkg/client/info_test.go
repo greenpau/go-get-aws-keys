@@ -13,54 +13,9 @@ func TestGetVersionInfo(t *testing.T) {
 	}{
 		{
 			input: Info{
-				Name:    "go-get-aws-keys",
-				Version: "1.0.0",
-				Git: GitInfo{
-					Branch: "master",
-					Commit: "63dc8b9",
-				},
-				Build: BuildInfo{
-					OperatingSystem: "linux",
-					Architecture:    "amd64",
-					User:            "greenpau",
-					Date:            "2019-09-18",
-				},
-			},
-			byteSize:   115,
-			shouldFail: false,
-		},
-		{
-			input: Info{
-				Name:    "go-get-aws-keys",
-				Version: "1.0.0",
-				Git: GitInfo{
-					Branch: "master",
-					Commit: "63dc8b9",
-				},
-			},
-			byteSize:   66,
-			shouldFail: false,
-		},
-		{
-			input: Info{
-				Name:    "go-get-aws-keys",
-				Version: "1.0.0",
-				Build: BuildInfo{
-					OperatingSystem: "linux",
-					Architecture:    "amd64",
-					User:            "greenpau",
-					Date:            "2019-09-18",
-				},
-			},
-			byteSize:   82,
-			shouldFail: false,
-		},
-
-		{
-			input: Info{
 				Name: "go-get-aws-keys",
 			},
-			byteSize:   28,
+			byteSize:   16,
 			shouldFail: false,
 		},
 	} {

@@ -113,7 +113,7 @@ func main() {
 		}
 		role := map[string]string{
 			"account_id":   awsAccountID,
-			"role":         awsRole,
+			"name":         awsRole,
 			"region":       awsRegion,
 			"profile_name": awsProfileName,
 		}

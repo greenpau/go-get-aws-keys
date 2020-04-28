@@ -20,9 +20,10 @@ func TestParseAdfsAuthResponseForm(t *testing.T) {
 			exp: &AdfsAuthResponseForm{
 				Host: "login.microsoftonline.com",
 				Fields: map[string]string{
-					"wa":      "wsignin1.0",
-					"wctx":    "estsredirect=2&amp;estsrequest=rQfd066002b7aa4882b08367a65ca0fd7b",
-					"wresult": `<t:RequestSecurityTokenResponse xmlns:t="http://schemas.xmlsoap.org/ws/2005/02/trust"><t:KeyType>http://schemas.xmlsoap.org/ws/2005/05/identity/NoProofKey</t:KeyType></t:RequestSecurityTokenResponse>`,
+					"LoginOptions": "1",
+					"wa":           "wsignin1.0",
+					"wctx":         "estsredirect=2&amp;estsrequest=rQfd066002b7aa4882b08367a65ca0fd7b",
+					"wresult":      `<t:RequestSecurityTokenResponse xmlns:t="http://schemas.xmlsoap.org/ws/2005/02/trust"><t:KeyType>http://schemas.xmlsoap.org/ws/2005/05/identity/NoProofKey</t:KeyType></t:RequestSecurityTokenResponse>`,
 				},
 			},
 			shouldFail: false,
@@ -52,14 +53,14 @@ func TestParseAdfsAuthResponseForm(t *testing.T) {
 		}
 
 		if (resp.Host != test.exp.Host) && !test.shouldFail {
-			t.Logf("FAIL: Test %d: input '%s', expected to pass, but failed due to mismatch %s (expected) vs %s (file)",
+			t.Logf("FAIL: Test %d: input '%s', expected to pass, but failed due to host mismatch %s (expected) vs %s (file)",
 				i, test.input, test.exp.Host, resp.Host)
 			testFailed++
 			continue
 		}
 
 		if (len(resp.Fields) != len(test.exp.Fields)) && !test.shouldFail {
-			t.Logf("FAIL: Test %d: input '%s', expected to pass, but failed due to mismatch %v (expected) vs %v (file)",
+			t.Logf("FAIL: Test %d: input '%s', expected to pass, but failed due to field count mismatch %v (expected) vs %v (file)",
 				i, test.input, test.exp.Fields, resp.Fields)
 			testFailed++
 			continue

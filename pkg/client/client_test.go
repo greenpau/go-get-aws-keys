@@ -7,24 +7,29 @@ import (
 func TestNewClient(t *testing.T) {
 	testFailed := 0
 	for i, test := range []struct {
-		awsRole      string
-		awsAccountID string
-		shouldFail   bool
+		awsRole        string
+		awsAccountID   string
+		awsRegion      string
+		awsProfileName string
+		shouldFail     bool
 	}{
 		{
-			awsRole:      "Administrator",
-			awsAccountID: "MyAccount",
-			shouldFail:   false,
+			awsRole:        "Administrator",
+			awsAccountID:   "MyAccount",
+			awsRegion:      "us-east-1",
+			awsProfileName: "default",
+			shouldFail:     false,
 		},
 	} {
 		cli := New()
-		if err := cli.SetAwsRole(test.awsRole); err != nil {
-			t.Logf("FAIL: Test %d (SetAssumeRole): expected to pass, but failed with: %v", i, err)
-			testFailed++
-			continue
+		role := map[string]string{
+			"account_id":   test.awsAccountID,
+			"name":         test.awsRole,
+			"region":       test.awsRegion,
+			"profile_name": test.awsProfileName,
 		}
-		if err := cli.SetAwsAccountID(test.awsAccountID); err != nil {
-			t.Logf("FAIL: Test %d (SetAccount): expected to pass, but failed with: %v", i, err)
+		if err := cli.RequestAwsRole(role); err != nil {
+			t.Logf("FAIL: Test %d (RequestAwsRole): expected to pass, but failed with: %v", i, err)
 			testFailed++
 			continue
 		}
