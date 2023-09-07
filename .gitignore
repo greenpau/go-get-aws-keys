@@ -19,3 +19,5 @@
 .doc/
 
 vendor/
+
+assets/tests/aws.sts.response.1.ini
