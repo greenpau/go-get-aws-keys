@@ -60,6 +60,14 @@ deploy:
 	@sudo rm -rf /usr/bin/$(BINARY)
 	@sudo cp ./bin/$(BUILD_OS)-$(BUILD_ARCH)/$(BINARY) /usr/bin/$(BINARY)
 
+dep:
+	@echo "Making dependencies check ..."
+	@go install golang.org/x/lint/golint@latest
+	@go install github.com/kyoh86/richgo@latest
+	@go install github.com/greenpau/versioned/cmd/versioned@latest
+	@pip3 install yamllint --user
+	@pip3 install yq --user
+
 qtest:
 	@./bin/$(BUILD_OS)-$(BUILD_ARCH)/$(BINARY) -version
 	@./bin/$(BUILD_OS)-$(BUILD_ARCH)/$(BINARY) -log-level debug
