@@ -1,6 +1,6 @@
 # go-get-aws-keys
 
-<a href="https://github.com/greenpau/go-get-aws-keys/actions/" target="_blank"><img src="https://github.com/greenpau/go-get-aws-keys/workflows/build/badge.svg?branch=master"></a>
+<a href="https://github.com/greenpau/go-get-aws-keys/actions/" target="_blank"><img src="https://github.com/greenpau/go-get-aws-keys/workflows/build/badge.svg?branch=main"></a>
 <a href="https://pkg.go.dev/github.com/greenpau/go-get-aws-keys" target="_blank"><img src="https://img.shields.io/badge/godoc-reference-blue.svg"></a>
 
 Obtain AWS STS Tokens by authenticating to ADFS via Azure, getting SAML
